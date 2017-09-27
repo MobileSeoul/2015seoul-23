@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">어울림</string>
+    <string name="findpw"><u>비밀번호 찾기 </u></string>
+    <string name="joinus"><u>회원가입 하기 </u></string>
+    <string name="push"><u><b>PUSH</b></u></string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_root">RootActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_join">JoinActivity</string>
+    <string name="title_activity_password">PasswordActivity</string>
+    <string name="title_activity_check_invite">CheckInviteActivity</string>
+    <string name="title_activity_pre_group">PreGroupActivity</string>
+    <string name="title_activity_add_friend">AddFriendActivity</string>
+    <string name="title_activity_select_region">SelectRegionActivity</string>
+    <string name="title_activity_select_course">SelectCourseActivity</string>
+    <string name="title_activity_select_final">SelectFinalActivity</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_course_list">CourseListActivity</string>
+    <string name="title_activity_my_msg">MyMsgActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_group">GroupActivity</string>
+    <string name="title_activity_promise">PromiseActivity</string>
+    <string name="title_activity_add_promise">AddPromiseActivity</string>
+    <string name="title_activity_promise_detail">PromiseDetailActivity</string>
+    <string name="title_activity_course_info">CourseInfoActivity</string>
+    <string name="title_activity_course_etc">CourseEtcActivity</string>
+    <string name="title_activity_my">MyActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+    <string name="title_activity_intro_tutorial">IntroTutorialActivity</string>
+</resources>

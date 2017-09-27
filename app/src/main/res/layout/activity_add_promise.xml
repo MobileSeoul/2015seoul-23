@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="22dp">
+
+            <!--날짜-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sch_date_icon"
+                    android:layout_marginEnd="8dp"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/sch_date_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:id="@+id/textView"
+                    android:layout_toEndOf="@id/sch_date_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_sch_date"
+                    android:text="2015. 09. 06. (일)"
+                    android:textColor="#222"
+                    android:textSize="18sp"
+                    android:layout_toEndOf="@id/textView" />
+
+            </RelativeLayout>
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mcv_showOtherDates="all"
+                app:mcv_selectionColor="#fc5151"
+                android:background="#e6e6e6"
+                android:layout_marginTop="8dp"/>
+
+            <!--시간-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sch_time_icon"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/sch_time_icon"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="8dp"
+                    android:id="@+id/time_txt"
+                    android:layout_toEndOf="@id/sch_time_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_sch_time"
+                    android:text="오후 5시 30분"
+                    android:textColor="#222"
+                    android:textSize="18sp"
+                    android:layout_toEndOf="@id/time_txt" />
+
+            </RelativeLayout>
+
+            <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/timePicker"
+                android:background="#e6e6e6"
+                android:layout_gravity="center_horizontal" />
+
+            <!--장소-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sch_location_icon"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/sch_location_icon"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="장소"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:id="@+id/location_txt"
+                    android:layout_toEndOf="@+id/sch_location_icon" />
+
+                <Spinner
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_location"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/location_txt" />
+            </RelativeLayout>
+
+            <!--약속내용-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sch_contents_icon"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/sch_contents_icon"
+                    android:layout_alignParentLeft="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="약속내용"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:id="@+id/sch_contents_txt"
+                    android:layout_toEndOf="@+id/sch_contents_icon" />
+
+                <EditText
+                    android:id="@+id/sch_contents_new"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="text|textMultiLine"
+                    android:layout_marginStart="5dp"
+                    android:maxLength="50"
+                    android:layout_marginTop="25dp"
+                    android:hint="상세 내용을 입력해 주세요."/>
+            </RelativeLayout>
+
+            <!--알림설정-->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/sch_alarm_icon"
+                    android:layout_marginEnd="8dp"
+                    android:id="@+id/sch_alarm_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="알림설정"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:id="@+id/sch_alarm_txt"
+                    android:layout_toEndOf="@+id/sch_alarm_icon" />
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/set_alarm_true"
+                    android:background="@null"
+                    android:src="@drawable/promise_checked"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/sch_alarm_icon"/>
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:id="@+id/set_alarm_false"
+                    android:src="@drawable/promise_unchecked"
+                    android:visibility="visible"
+                    android:layout_marginStart="20dp"
+                    android:layout_below="@+id/sch_alarm_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설정하기"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:textSize="16sp"
+                    android:layout_toEndOf="@+id/set_alarm_true"
+                    android:layout_below="@+id/sch_alarm_icon"/>
+
+            </RelativeLayout>
+
+            <!--버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center_horizontal"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:id="@+id/cancelPromise"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_pink"
+                    android:text="취   소"
+                    android:textColor="#fff" />
+
+                <Button
+                    android:id="@+id/addPromise"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="60dp"
+                    android:background="@drawable/button_pink"
+                    android:text="확   인"
+                    android:textColor="#fff" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

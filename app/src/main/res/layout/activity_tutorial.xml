@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff8ed">
+
+    <TextView
+        android:text = "어울림이 시작되었습니다."
+        android:gravity="center"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center">
+
+        <!-- 현재 코스 -->
+        <TextView
+            android:id="@+id/txtTutorialName1"
+            android:text="당현천길"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/road_nametag"/>
+
+        <!-- 나머지 코스 -->
+        <TextView
+            android:id="@+id/txtTutorialName2"
+            android:text="불암산길"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/road_nametag"/>
+
+        <TextView
+            android:id="@+id/txtTutorialName3"
+            android:text="초안산길"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:layout_marginEnd="2dp"
+            android:background="@drawable/road_nametag"/>
+
+        <TextView
+            android:id="@+id/txtTutorialName4"
+            android:text="묵동천길"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:background="@drawable/road_nametag"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/txtTutorialCourseSum"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:background="@drawable/info_total_km"/>
+
+        <TextView
+            android:text = "의 여정을 "
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtTutorialDaysSum"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:paddingTop="3dp"
+            android:background="@drawable/info_dayby"/>
+
+        <TextView
+            android:text = "일 동안 완주해보세요!"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true">
+
+            <!-- 버튼 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="92.5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true">
+
+                    <ImageButton
+                        android:id="@+id/btnTutorialCourseName6"
+                        android:src="@drawable/course_button_grey"
+                        android:scaleType="fitXY"
+                        android:layout_width="125dp"
+                        android:layout_height="62.5dp"
+                        android:background="@null"
+                        android:rotation="-30"
+                        android:layout_marginEnd="-17.5dp"
+                        android:clickable="false"/>
+                    <ImageButton
+                        android:id="@+id/btnTutorialCourseName1"
+                        android:src="@drawable/course_button_grey"
+                        android:scaleType="fitXY"
+                        android:layout_width="125dp"
+                        android:layout_height="62.5dp"
+                        android:background="@null"
+                        android:rotation="30"
+                        android:layout_marginStart="-17.5dp"
+                        android:clickable="false"/>
+
+
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnTutorialCourseName2"
+                    android:src="@drawable/course_button_grey"
+                    android:scaleType="fitXY"
+                    android:layout_width="125dp"
+                    android:layout_height="62.5dp"
+                    android:background="@null"
+                    android:rotation="90"
+                    android:layout_marginEnd="-27.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="false"/>
+
+                <ImageButton
+                    android:id="@+id/btnTutorialCourseName5"
+                    android:src="@drawable/course_button_grey"
+                    android:scaleType="fitXY"
+                    android:layout_width="125dp"
+                    android:layout_height="62.5dp"
+                    android:background="@null"
+                    android:rotation="-90"
+                    android:layout_marginStart="-27.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:clickable="false"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="92.5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true">
+
+                    <ImageButton
+                        android:id="@+id/btnTutorialCourseName4"
+                        android:src="@drawable/course_button_grey"
+                        android:scaleType="fitXY"
+                        android:layout_width="125dp"
+                        android:layout_height="62.5dp"
+                        android:background="@null"
+                        android:rotation="-150"
+                        android:layout_marginEnd="-17.5dp"
+                        android:clickable="false"/>
+                    <ImageButton
+                        android:id="@+id/btnTutorialCourseName3"
+                        android:src="@drawable/course_button_grey"
+                        android:scaleType="fitXY"
+                        android:layout_width="125dp"
+                        android:layout_height="62.5dp"
+                        android:background="@null"
+                        android:rotation="150"
+                        android:layout_marginStart="-17.5dp"
+                        android:clickable="false"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- 원 라인 -->
+            <ImageView
+                android:src="@drawable/course_oval"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:src="@drawable/course_oval"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"/>
+
+            <!-- 코스 이름 -->
+            <RelativeLayout
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:layout_centerInParent="true" >
+
+                <!-- text -->
+                <condi.kr.ac.swu.condidemo.view.CurvTextView
+                    android:id="@+id/txtTutorialCourseArray"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <!-- 지역구 표시 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgTutorialLandmark"
+                    android:src="@drawable/landmark1"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/txtTutorialRegionName"
+                    android:text="중구"
+                    android:textSize="24sp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 말풍선 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:gravity="center"
+                android:layout_alignParentTop="true">
+
+                <TextView
+                    android:id="@+id/txtTutorialSpeechBox6"
+                    android:text="현재 선택한 길"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/speechbubble_pink"
+                    android:rotation="-30"
+                    />
+                <TextView
+                    android:id="@+id/txtTutorialSpeechBox1"
+                    android:text="현재 선택한 길"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/speechbubble_pink"
+                    android:rotation="30"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTutorialSpeechBox5"
+                android:text="현재 선택한 길"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                android:gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/speechbubble_pink"
+                android:rotation="-90"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-15dp"
+                />
+            <TextView
+                android:id="@+id/txtTutorialSpeechBox2"
+                android:text="현재 선택한 길"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                android:gravity="center_horizontal"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/speechbubble_pink"
+                android:rotation="90"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="-15dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/txtTutorialSpeechBox4"
+                    android:text="현재 선택한 길"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/speechbubble_pink"
+                    android:rotation="-150"
+                    />
+                <TextView
+                    android:id="@+id/txtTutorialSpeechBox3"
+                    android:text="현재 선택한 길"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/speechbubble_pink"
+                    android:rotation="150" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnMain"
+        android:text="확    인"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_mint"/>
+
+</LinearLayout>

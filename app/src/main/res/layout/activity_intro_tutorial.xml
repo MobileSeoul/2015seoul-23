@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="condi.kr.ac.swu.condiproject.activity.IntroTutorialActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/flipper">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_tutorial1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_tutorial2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/img_tutorial3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </ViewFlipper>
+
+        <ImageButton
+            android:id="@+id/btn_before"
+            android:src="@drawable/btn_before"
+            android:layout_width="20dp"
+            android:layout_height="35dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:visibility="invisible"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:src="@drawable/btn_next"
+            android:layout_width="20dp"
+            android:layout_height="35dp"
+            android:scaleType="fitXY"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="초대 확인"
+            android:textSize="12sp"
+            android:textColor="#fff"
+            android:id="@+id/txt_tutorial_check"
+            android:visibility="invisible"
+            android:layout_marginEnd="28dp"/>
+
+    </RelativeLayout>
+</LinearLayout>

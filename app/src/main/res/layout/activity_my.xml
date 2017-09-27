@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:gravity="center_horizontal">
+
+        <!-- 그래프 배경 -->
+        <ImageView
+            android:id="@+id/imgGraphBackground"
+            android:layout_width="match_parent"
+            android:layout_height="246dp"
+            android:contentDescription="@string/abc_search_hint"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background2" />
+
+
+        <!-- 그래프 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal">
+
+
+            <!-- 파이 그래프 -->
+            <view
+                android:id="@+id/customCircularRingView2"
+                class="condi.kr.ac.swu.condidemo.view.CustomCircularRingView2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"></view>
+
+            <view
+                android:id="@+id/patchPointView2"
+                class="condi.kr.ac.swu.condidemo.view.PatchPointView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"></view>
+
+            <!-- 그래프 가운데의 반투명 원 -->
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circular_background2" />
+
+            <!-- 자세한 정보들 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <!-- 총 진행 날짜(텍스트 크기가 같다면 레이아웃 제거) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <!-- 현재까지 날짜 -->
+                    <TextView
+                        android:id="@+id/txtCurrentDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="#fafafa"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일 째/"
+                        android:textColor="#fafafa"
+                        android:textSize="18sp" />
+
+                    <!-- 총 날짜 -->
+                    <TextView
+                        android:id="@+id/txtTotalDate2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="#fafafa"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일"
+                        android:textColor="#fafafa"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- 진행 퍼센티지 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/txtPercent2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50"
+                        android:textColor="#fafafa"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textColor="#fafafa"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <!-- 총 진행 정도(텍스트 크기가 같다면 레이아웃 제거) -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!-- 현재까지 KM -->
+                    <TextView
+                        android:id="@+id/txtCurrentKM2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fafafa"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KM"
+                        android:textColor="#fafafa"
+                        android:textSize="16sp" />
+
+                    <!-- 전체 KM -->
+                    <TextView
+                        android:id="@+id/txtTotalKM2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21.4"
+                        android:textColor="#fafafa"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KM"
+                        android:textColor="#fafafa"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+                    <ImageView
+                        android:src="@drawable/icon_step"
+                        android:scaleType="fitCenter"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="8dp"/>
+                    <TextView
+                        android:id="@+id/myStep"
+                        android:text="20000"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- 코스 이름 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="4dp"
+            android:gravity="center_horizontal">
+
+            <!-- 현재 코스 -->
+            <TextView
+                android:id="@+id/txtCourseName12"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/road_nametag_on"
+                android:gravity="center"
+                android:text="불암산길"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <!-- 나머지 코스 -->
+            <TextView
+                android:id="@+id/txtCourseName22"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/route_blank"
+                android:gravity="center"
+                android:text="당현천길"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtCourseName32"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/route_blank"
+                android:gravity="center"
+                android:text="묵동천길"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtCourseName42"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:background="@drawable/route_blank"
+                android:gravity="center"
+                android:text="초안산길"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이번 여정에서 나는"
+        android:textColor="#ff371b"
+        android:layout_gravity="center_horizontal"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mypageScrollView"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_alignParentEnd="true">
+
+            <LinearLayout
+                android:id="@+id/barChart"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:gravity="bottom">
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#ff30c9ff"/>
+
+            <LinearLayout
+                android:id="@+id/barDate"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center">
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</LinearLayout>
+

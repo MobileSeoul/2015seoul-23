@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/lldialog"
+	android:background="@drawable/dialog_background"
+    android:padding="20dp"
+	android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/dlgDefaultText_big"
+        android:gravity="center"
+        android:text="dd"
+        android:textSize="18sp"
+        android:textColor="#3d3d3d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/dlgDefaultText_small"
+        android:gravity="center"
+        android:text="dd"
+        android:textSize="14sp"
+        android:textColor="#3d3d3d"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+	<Button
+		android:id="@+id/dlgOk"
+		android:text="확   인"
+		android:textSize="16sp"
+		android:textColor="#3d3d3d"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+		android:padding="5dp"
+		android:background="@drawable/dialog_button"
+		android:layout_gravity="center"
+		android:layout_marginTop="20dp"/>
+
+</LinearLayout>

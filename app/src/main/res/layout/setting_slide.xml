@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/slide"
+    android:layout_width="300dp"
+    android:layout_height="fill_parent"
+    android:background="#e9e4de"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+
+            <condi.kr.ac.swu.condidemo.view.CircularNetworkImageView
+                android:id="@+id/slideProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:scaleType="centerCrop"
+                android:focusable="false"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+						android:id="@+id/slideName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:text="사용자 이름" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="님" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="힘차게 걸어보세요!" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="코스 정보 보기 >>"
+        android:textSize="26sp"
+        android:textColor="#fff"
+        android:id="@+id/btn_about_courses_list"
+        android:background="@drawable/interaction_main_button_mint"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:id="@+id/see_more_msg"
+        android:text="더보기 >  "
+        android:textSize="18sp"
+		android:clickable="true"
+        android:textColor="#4f4b48"
+        android:layout_gravity="end"/>
+
+
+    <ListView
+		android:id="@+id/lvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:divider="#fff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_goto_setting">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_setting"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+			android:id="@+id/btnGoSetting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="환경설정"
+            android:textSize="22sp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="12dp"/>
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="6dp"
+        android:textSize="9sp"
+        android:textColor="#c1bcb8"
+        android:text="C O P Y R I G H T    2 0 1 5 어울림"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="6dp"
+        android:textSize="9sp"
+        android:textColor="#c1bcb8"
+        android:text="Introduction C O P Y R I G H T      2 0 1 5 어울림  All rights reserved."/>
+
+</LinearLayout>

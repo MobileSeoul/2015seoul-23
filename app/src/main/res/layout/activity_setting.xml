@@ -1,0 +1,329 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!--내 정보 수정-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/setting_square" />
+
+                <ImageView
+                    android:id="@+id/setting_top1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:src="@drawable/setting_top" />
+
+                <TextView
+                    android:id="@+id/txt_setting_top1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/setting_top1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="16dp"
+                    android:text="내 정보 수정"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+
+                <condi.kr.ac.swu.condidemo.view.CircularNetworkImageView
+                    android:id="@+id/settingProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/setting_top1"
+                    android:layout_centerHorizontal="true"
+                    android:focusable="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thumb_story" />
+
+                <ImageButton
+                    android:id="@+id/btnSettingPic"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignBottom="@id/settingProfile"
+                    android:layout_alignRight="@id/settingProfile"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_camera" />
+
+                <LinearLayout
+                    android:id="@+id/setting_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txt_setting_top1"
+                    android:layout_below="@+id/settingProfile"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="별명 | " />
+
+                    <TextView
+                        android:id="@+id/settingName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="장미희" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/setting_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txt_setting_top1"
+                    android:layout_below="@+id/setting_nickname"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="신장 | " />
+
+                    <TextView
+                        android:id="@+id/settingHeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="160" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:text="cm" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <!--비밀번호 변경-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/setting_square" />
+
+                <ImageView
+                    android:id="@+id/setting_top2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:src="@drawable/setting_top" />
+
+                <TextView
+                    android:id="@+id/txt_setting_top2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/setting_top2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="16dp"
+                    android:text="비밀번호 변경"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:hint="새로운 비밀번호 입력"
+                    android:background="@drawable/password_bg"
+                    android:gravity="center"
+                    android:layout_below="@+id/setting_top2"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/settingPassword1"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:hint="한 번 더 입력"
+                    android:background="@drawable/password_bg"
+                    android:gravity="center"
+                    android:layout_below="@+id/settingPassword1"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/settingPassword2"
+                    android:layout_marginTop="15dp"/>
+
+
+                <Button
+                    android:id="@+id/settingBtnPassword"
+                    android:text="확  인"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_mint"
+                    android:layout_below="@+id/settingPassword2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"/>
+
+
+            </RelativeLayout>
+
+
+
+            <!--알림끄기-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/setting_square" />
+
+                <ImageView
+                    android:id="@+id/setting_top3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:src="@drawable/setting_top" />
+
+                <TextView
+                    android:id="@+id/txt_setting_top3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/setting_top3"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="16dp"
+                    android:text="알람 끄기"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting3_1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="50dp"
+                    android:layout_below="@+id/setting_top3"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="콕 메세지 알림 끄기"
+                        android:textSize="18sp"/>
+
+                    <ImageButton
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/checkbox_setting_off"
+                        android:id="@+id/alarm_off_cock"
+                        android:scaleType="fitCenter"
+                        android:layout_marginStart="90dp"
+                        android:background="@null" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting3_2"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="50dp"
+                    android:layout_below="@+id/setting3_1"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시스템 메세지 알림 끄기"
+                        android:textSize="18sp"/>
+
+                    <ImageButton
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/checkbox_setting_off"
+                        android:id="@+id/alarm_off_system"
+                        android:scaleType="fitCenter"
+                        android:layout_marginStart="55dp"
+                        android:background="@null" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/setting3_3"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="50dp"
+                    android:layout_below="@+id/setting3_2"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="약속 알림 끄기"
+                        android:textSize="18sp"/>
+
+                    <ImageButton
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/checkbox_setting_off"
+                        android:id="@+id/alarm_off_promise"
+                        android:scaleType="fitCenter"
+                        android:layout_marginStart="130dp"
+                        android:background="@null" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:id="@+id/settingBtnLogout"
+                android:text="로그아웃"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:background="@drawable/button_mint"
+                android:layout_marginStart="50dp"/>
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/settingBtnJoinDelete"
+                    android:text="회원 탈퇴"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:background="@drawable/button_mint"
+                    android:layout_marginStart="50dp"/>
+
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

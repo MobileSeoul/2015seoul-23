@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff8ed"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="당현천길"
+        android:id="@+id/info_each_name"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/course_km_line_black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9.79km"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:id="@+id/info_each_km"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/course_km_line_black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:src="@drawable/interaction_l_video"
+            android:id="@+id/btnBreforeCourseDetail"
+            android:scaleType="fitCenter"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical|start"
+            android:background="@null"/>
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imgCourseDetail"
+            android:layout_width="250dp"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:src="@drawable/interaction_r_video"
+            android:id="@+id/btnAfterCourseDetail"
+            android:scaleType="fitCenter"
+            android:layout_width="30dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/info_each_circle_small"
+            android:id="@+id/icon_info_each_photo1"
+            android:layout_marginRight="25dp"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/info_each_circle_big"
+            android:id="@+id/icon_info_each_photo2"
+            android:layout_marginRight="25dp"/>
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/info_each_circle_small"
+            android:id="@+id/icon_info_each_photo3"
+            android:layout_marginRight="25dp"/>
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/info_each_circle_small"
+            android:id="@+id/icon_info_each_photo4"
+            android:layout_marginRight="25dp"/>
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/info_each_circle_small"
+            android:id="@+id/icon_info_each_photo5"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtCourseInfoDetail1"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtCourseInfoDetail2"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

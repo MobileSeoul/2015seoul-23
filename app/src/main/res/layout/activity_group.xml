@@ -1,0 +1,803 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--  그래프 영역(높이 임의 지정) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E0E0E0"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:gravity="center_horizontal">
+
+            <!-- 그래프 배경 -->
+            <ImageView
+                android:id="@+id/imgGraphBackground"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:contentDescription="@string/abc_search_hint"
+                android:scaleType="centerCrop"
+                android:src="@drawable/background2" />
+
+
+            <!-- 그래프 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_horizontal">
+
+
+                <!-- 파이 그래프 -->
+                <view
+                    android:id="@+id/customCircularRingView"
+                    class="condi.kr.ac.swu.condidemo.view.CustomCircularRingView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"></view>
+
+                <view
+                    android:id="@+id/patchPointView"
+                    class="condi.kr.ac.swu.condidemo.view.PatchPointView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerHorizontal="true"></view>
+
+                <!-- 그래프 가운데의 반투명 원 -->
+                <ImageView
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circular_background" />
+
+                <!-- 자세한 정보들 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <!-- 총 진행 날짜(텍스트 크기가 같다면 레이아웃 제거) -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <!-- 현재까지 날짜 -->
+                        <TextView
+                            android:id="@+id/txtCurrentDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textColor="#fafafa"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일 째/"
+                            android:textColor="#fafafa"
+                            android:textSize="18sp" />
+
+                        <!-- 총 날짜 -->
+                        <TextView
+                            android:id="@+id/txtTotalDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textColor="#fafafa"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="일"
+                            android:textColor="#fafafa"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <!-- 진행 퍼센티지 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-5dp">
+
+                        <TextView
+                            android:id="@+id/txtPercent"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="50"
+                            android:textColor="#fafafa"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="#fafafa"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <!-- 총 진행 정도(텍스트 크기가 같다면 레이아웃 제거) -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-7dp">
+
+                        <!-- 현재까지 KM -->
+                        <TextView
+                            android:id="@+id/txtCurrentKM"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fafafa"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="km/"
+                            android:textColor="#fafafa"
+                            android:textSize="13sp" />
+
+                        <!-- 전체 KM -->
+                        <TextView
+                            android:id="@+id/txtTotalKM"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="#fafafa"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="km"
+                            android:textColor="#fafafa"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 코스 이름 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginStart="4dp"
+                android:gravity="center_horizontal">
+
+                <!-- 현재 코스 -->
+                <TextView
+                    android:id="@+id/txtCourseName1"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/route_blank_filled"
+                    android:gravity="center"
+                    android:text="불암산길"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <!-- 나머지 코스 -->
+                <TextView
+                    android:id="@+id/txtCourseName2"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/route_blank"
+                    android:gravity="center"
+                    android:text="당현천길"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtCourseName3"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/route_blank"
+                    android:gravity="center"
+                    android:text="묵동천길"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/txtCourseName4"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/route_blank"
+                    android:gravity="center"
+                    android:text="초안산길"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 버튼 영역 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp">
+
+            <!-- 지도보기 -->
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="4dp">
+
+                <Button
+                    android:id="@+id/btnMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_group" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/ic_locate"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="6dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_locate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="완주지역"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <!-- 약속잡기 -->
+            <RelativeLayout
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp">
+
+                <Button
+                    android:id="@+id/btnTodolist"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_group" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginEnd="6dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_schedule" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="약속잡기"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/list_background">
+
+            <condi.kr.ac.swu.condidemo.view.CircularNetworkImageView
+                android:id="@+id/p1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/p1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="장미희"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:id="@+id/pcurrent1_km"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="KM   |"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:id="@+id/pcurrent1_step"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="걸음"
+                        android:textColor="#4C4C4C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선택코스 : "
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pcourse1"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="불암산길"
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pkm1"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="9.79"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="km"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 친구 목록 -->
+        <RelativeLayout
+            android:id="@+id/friend1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/list_background">
+
+            <condi.kr.ac.swu.condidemo.view.CircularNetworkImageView
+                android:id="@+id/p2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/p2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="장미희"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:id="@+id/pcurrent2_km"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="KM   |"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:id="@+id/pcurrent2_step"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="걸음"
+                        android:textColor="#4C4C4C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선택코스 : "
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pcourse2"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="불암산길"
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pkm2"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="9.79"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="km"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/groups_cock2"
+                android:src="@drawable/icon_cock"
+                android:scaleType="fitCenter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/friend2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/list_background">
+
+            <condi.kr.ac.swu.condidemo.view.CircularNetworkImageView
+                android:id="@+id/p3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/p3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pname3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="장미희"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:id="@+id/pcurrent3_km"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="KM   |"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:id="@+id/pcurrent3_step"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="걸음"
+                        android:textColor="#4C4C4C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선택코스 : "
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pcourse3"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="불암산길"
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pkm3"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="9.79"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="km"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/groups_cock3"
+                android:src="@drawable/icon_cock"
+                android:scaleType="fitCenter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/friend3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/list_background">
+
+            <condi.kr.ac.swu.condidemo.view.CircularNetworkImageView
+                android:id="@+id/p4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/p4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pname4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="장미희"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:id="@+id/pcurrent4_km"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="KM   |"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:id="@+id/pcurrent4_step"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#4C4C4C" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="걸음"
+                        android:textColor="#4C4C4C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선택코스 : "
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pcourse4"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:text="불암산길"
+                        android:textColor="#596466"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/pkm4"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:text="9.79"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="km"
+                        android:textColor="#999"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/groups_cock4"
+                android:src="@drawable/icon_cock"
+                android:scaleType="fitCenter"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"/>
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/groups_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:divider="#E0E0E0"
+            android:dividerHeight="4dp" />/>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff8ed"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+
+        <!--이번 여정 코스-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/etc_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="노원구"
+                android:textColor="#000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="210dp">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="210dp"
+                        android:background="@drawable/course_dropshadow" />
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/etc_course1"
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/info_name_etc_course1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/etc_course1"
+                        android:layout_below="@id/etc_course1"
+                        android:text="당현천길" />
+
+                    <TextView
+                        android:id="@+id/info_km_etc_course1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/etc_course1"
+                        android:layout_below="@id/etc_course1"
+                        android:text="2.84km" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="210dp"
+                    android:layout_marginStart="6dp">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="210dp"
+                        android:background="@drawable/course_dropshadow" />
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/etc_course2"
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/info_name_etc_course2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/etc_course2"
+                        android:layout_below="@id/etc_course2"
+                        android:text="당현천길" />
+
+                    <TextView
+                        android:id="@+id/info_km_etc_course2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/etc_course2"
+                        android:layout_below="@id/etc_course2"
+                        android:text="2.84km" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="210dp">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="210dp"
+                        android:background="@drawable/course_dropshadow" />
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/etc_course3"
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/info_name_etc_course3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/etc_course3"
+                        android:layout_below="@id/etc_course3"
+                        android:text="당현천길" />
+
+                    <TextView
+                        android:id="@+id/info_km_etc_course3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/etc_course3"
+                        android:layout_below="@id/etc_course3"
+                        android:text="2.84km" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="210dp"
+                    android:layout_marginStart="6dp">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="210dp"
+                        android:background="@drawable/course_dropshadow" />
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/etc_course4"
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/info_name_etc_course4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/etc_course4"
+                        android:layout_below="@id/etc_course4"
+                        android:text="당현천길" />
+
+                    <TextView
+                        android:id="@+id/info_km_etc_course4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/etc_course4"
+                        android:layout_below="@id/etc_course4"
+                        android:text="2.84km" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="210dp">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="210dp"
+                        android:background="@drawable/course_dropshadow" />
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/etc_course5"
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/info_name_etc_course5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/etc_course5"
+                        android:layout_below="@id/etc_course5"
+                        android:text="당현천길" />
+
+                    <TextView
+                        android:id="@+id/info_km_etc_course5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/etc_course5"
+                        android:layout_below="@id/etc_course5"
+                        android:text="2.84km" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="210dp"
+                    android:layout_marginStart="6dp">
+
+                    <ImageView
+                        android:layout_width="170dp"
+                        android:layout_height="210dp"
+                        android:background="@drawable/course_dropshadow" />
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:id="@+id/etc_course6"
+                        android:layout_width="150dp"
+                        android:layout_height="160dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/info_name_etc_course6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@id/etc_course6"
+                        android:layout_below="@id/etc_course6"
+                        android:text="당현천길" />
+
+                    <TextView
+                        android:id="@+id/info_km_etc_course6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@id/etc_course6"
+                        android:layout_below="@id/etc_course6"
+                        android:text="2.84km" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
